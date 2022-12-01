@@ -1,0 +1,1314 @@
+@font-face {
+    font-family: proxima nova regular; /* Гарнитура шрифта */
+    src: url(../font/ProximaNova-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: proxima nova cold; /* Гарнитура шрифта */
+    src: url(../font/ProximaNovaCold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Proxima_Nova_Black; /* Гарнитура шрифта */
+    src: url(../font/ProximaNova-Black.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Proxima_Nova_Bold; /* Гарнитура шрифта */
+    src: url(../font/ProximaNova-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+    html,body{
+        min-width: 360px;
+        max-width: 800px;
+        margin: 0;
+        padding: 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        position: relative;
+
+
+    }
+    ol{
+        list-style: none;
+    }
+    #Head{
+        background-color: #000000;
+
+        width: 100%;
+        max-width: 800px;
+        border: 1px solid black;
+        position: fixed;
+        top: 0px;
+        z-index: 10;
+
+    }
+    .annaland{
+        padding-right: 0px;
+        color: #ffffff;
+        list-style: none;
+    }
+    .annaland a{
+        text-decoration: none;
+        color: #ffffff;
+        position: relative;
+        bottom: 0px;
+    }
+    .MENU{
+
+        display: none;
+    }
+    #HeadIMGPreview{
+        position: relative;
+        top: 50px;
+
+
+
+
+    }
+    .type{
+        position: absolute;
+        width: 100%;
+
+        top: 10%;
+        z-index: 1;
+    }
+    .name2{
+        color: white;
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        font-family: proxima nova cold;
+        font-size: 1.5em;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-shadow: 1px 1px 2px black;
+    }
+    .namepreview2{
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        text-shadow: 1px 1px 2px black;
+        font-family: proxima nova cold;
+        font-size: 0.4em;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 5px 10px 5px 10px;
+        display: inline-block;
+        background-color: black;
+        opacity: 0.7;
+        color: white;
+    }
+    .demo {
+        position: relative;
+
+    }
+    .chengit{
+        position: relative;
+        top: 50px;
+        font-size: 14px;
+        background-color: #0077ca;
+        border-radius: 20px;
+
+        color: #ffffff;
+        padding: 5px 50px 5px 50px;
+    }
+    .chengit a{
+        text-decoration: none;
+    }
+    .chengit:hover{
+        text-shadow: 3px 3px 6px black;
+        box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.5);
+    }
+    #HeadIMGPreview .demo img{
+        position: relative;
+        width: 100%;
+
+
+
+    }
+
+#HeadIMGPreview .swiper-container2 {
+    position: relative;
+
+    width: 100%;
+    max-width: 800px;
+
+    max-height: 100%;
+}
+#HeadIMGPreview .swiper-wrapper2{
+    padding-left: initial;
+    margin: 0;
+}
+#HeadIMGPreview .swiper-slide2 img{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+}
+#HeadIMGPreview .swiper-slide2 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 100%;
+    border-right: 1px solid black;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-pagination2-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color:#000;
+    opacity: 1;
+    background: rgba(0,0,0,0.2);
+}
+
+.swiper-pagination2{
+    position: relative;
+
+
+}
+.swiper-pagination2-bullet-active {
+    color:#fff;
+    background: #007aff;
+}
+
+.name{
+        color: white;
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    width: 100%;
+    max-width: 800px;;
+
+        font-family: proxima nova cold;
+        font-size: 60px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        display: inline-block;
+        text-shadow: 2px 2px 3px black;
+    z-index: 9;
+    }
+
+    .namepreview{
+
+        position: absolute;
+        text-align: center;
+        top: 35%;
+        width: 100%;
+        max-width: 800px;
+        font-family: proxima nova cold;
+        font-size: 14px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 5px 10px 5px 10px;
+        display: inline-block;
+        background-color: black;
+        opacity: 0.7;
+        color: white;
+        text-align: center;
+        z-index: 9;
+    }
+    .name span{
+        color: #2a2a9e;}
+    #slider-wrap{ /* Оболочка слайдера и кнопок */
+        position: relative;
+
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+
+
+    }
+    #slider{ /* Оболочка слайдера */
+        position: relative;
+        height: 100%;
+        width: 100%;
+        max-width: 800px;
+
+
+
+        overflow: hidden;
+    }
+    .slide{ /* Слайд */
+            width: 100%;
+        max-width: 800px;
+
+
+    }
+    .sli-links{ /* Кнопки смены слайдов */
+        position: relative;
+        top: -30px;
+        margin-top:10px;
+        text-align:center;}
+    .sli-links .control-slide{
+        margin:2px;
+        display:inline-block;
+        width:10px;
+        height:10px;
+        overflow:hidden;
+        text-indent:-9999px;
+        background:url(radioBg.png) center bottom no-repeat;
+        background-size: cover ;
+    }
+    .sli-links .control-slide:hover{
+        cursor:pointer;
+        background-position:center center;}
+    .sli-links .control-slide.active{
+        background-position:center top;}
+    .slider-wrap1{ /* Оболочка слайдера и кнопок */
+        position: relative;
+        left: calc(50% - 150px);
+        width:300px;
+        height: 100%;
+
+    }
+    .slider1{ /* Оболочка слайдера */
+        position:relative;
+        width: 300px;
+        height: 100%;
+        overflow: hidden;
+    }
+    .slide1{ /* Слайд */
+        width:100%;
+        height:100%;
+    }
+    .sli-links1{ /* Кнопки смены слайдов */
+        position: relative;
+        top: -80px;
+
+        width: 100px;
+        left: calc(50% - 50px);
+        margin-top:10px;
+        text-align:center;}
+    .sli-links1 .control-slide1{
+        margin:5px;
+        display:inline-block;
+        width:12px;
+        height:12px;
+        overflow:hidden;
+        text-indent:-9999px;
+        background:url(radioBg2.png) center bottom no-repeat;}
+    .sli-links1 .control-slide1:hover{
+        cursor:pointer;
+        background-position:center center;}
+    .sli-links1 .control-slide1.active{
+        background-position:center top;}
+    #prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
+        display:block;
+        width:15px;
+        height:100%;
+        position:absolute;
+        top:0;
+        overflow:hidden;
+        text-indent:-999px;
+        background:url(arrowBg.png) left center no-repeat;
+        opacity:0.8;
+        z-index:3;
+        outline:none !important;}
+    #prewbutton{
+        left:10px;}
+    #nextbutton{
+        right:10px;
+        background:url(arrowBg.png) right center no-repeat;}
+    #prewbutton:hover, #nextbutton:hover{
+        opacity:1;}
+    #Servise{
+        position: relative;
+        top: 50px;
+        background-color: #15161a;
+        height: 450px;
+        width: 100%;
+        max-width: 800px;
+
+        display: inline-block;
+
+    }
+    .servis{
+        float: right;
+        position: relative;
+        top: 15px;
+        right: 0px;
+
+        display: inline;
+
+
+    }
+    .servis img{
+        padding: 10px 20px 0px 40px;
+
+    }
+
+    #SerImg{
+
+        background-color: #ebebeb;
+        position: relative;
+
+
+        width: 100%;
+        max-width: 800px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    #SerImg img{
+        position: relative;
+                width: 100%;
+        max-width: 800px;
+
+    }
+    #Galerea{
+        position: relative;
+        background-color: #ebebeb;
+                width: 100%;         max-width: 800px;
+
+        height: auto;
+        color: #363636;
+
+    }
+    #Galerea p{
+        font-size: 72px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-family: "proxima_nova_black";
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+
+    }
+    .gal{
+
+        width: 325px;
+        border-bottom: 10px solid #363636;
+    }
+    .imgcom{
+        background-color: white;
+        height: 80px;
+        color: #42b8dd;
+        font-family: proxima_nova_black;
+        font-size: 25px;
+        text-align: center;
+        position: relative;
+        bottom: 82px;
+        display: none;
+
+    }
+    #Galerea table {
+        position: relative;
+                width: 100%;         max-width: 800px;
+
+
+
+    }
+    #Galerea tr{
+
+    }
+    #Galerea td{
+                width: 100%;         max-width: 800px;
+        height: 320px;
+        overflow: hidden;
+
+
+    }
+    #Galerea td img:hover + .imgcom{
+        display: block;
+    }
+    #Galerea td div{
+
+
+    }
+    #Galerea table tr td img{
+
+        width: 100%;
+        height: 300px;
+    }
+    #Galerea td ol{
+        padding-left: 0px;
+    }
+    #Galerea td li{
+        margin: 5px 5px 5px 5px;
+        border: 2px solid #42b8dd;
+        padding: 5px 10px 5px 10px;
+        border-radius: 20px 20px 20px 20px;
+        font-family: "proxima nova regular";
+        color: #42b8dd;
+    }
+    #Galerea td li:hover{
+        background-color: #42b8dd;
+        color: white;
+    }
+    #Save{
+        display: none;
+    }
+    #Techic{
+        display: none;
+    }
+    .slidedown{
+        display: none;
+    }
+    .slidedown2{
+        display: none;
+    }
+    .botplus{
+        font-weight: bold;
+
+        font-size: 50px;
+        background-color: #42b8dd;
+        color: white;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+    .botplus:hover{
+        background-color: white;
+        color: #42b8dd;
+    }
+    .botplus2{
+        font-weight: bold;
+
+        font-size: 50px;
+        background-color: #42b8dd;
+        color: white;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+    .botplus2:hover{
+        background-color: white;
+        color: #42b8dd;
+    }
+    #Feadback{
+        background-color: #666666;
+        height: 300px;
+        width: 1000px;
+        position: relative;
+        left: calc(50% - 500px);
+        font-family: "proxima nova regular";
+
+    }
+    #Ourcomand{
+        background-color: white;
+        height: auto;
+                width: 100%;         max-width: 800px;
+        position: relative;
+
+
+    }
+    .piopl{
+        height: 600px;
+
+
+    }
+    .gal2{
+        color: #363636;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-family: "proxima_nova_black";
+        width: 270px;
+
+        border-bottom: 10px solid #363636;
+    }
+    .gal3{
+        color: #363636;
+
+        text-transform: uppercase;
+        font-family: "proxima_nova_black";
+        border-bottom: 10px solid #363636;
+        margin-bottom: 10px;
+
+    }
+    area:hover{
+        border: 5px solid black;
+    }
+    .gal2 h4{
+        margin: 0 0 0 0;
+    }
+    #Ourcomand table {
+        position: relative;
+                width: 100%;         max-width: 800px;
+
+
+
+    }
+    #Ourcomand p{
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+    }
+    .shadow:hover{
+        -webkit-filter: drop-shadow(1px 1px 10px white);
+        filter: drop-shadow(1px 1px 10px white);}
+    #Ourcomand tr{
+                width: 100%;         max-width: 800px;
+    }
+    #Ourcomand td{
+        display: inline;
+                width: 100%;         max-width: 800px;
+        height: 640px;
+        overflow: hidden;
+    }
+    #Ourcomand td ol {
+        position: relative;
+        background-color: #42B8DD;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        transition: width 0.3s;
+        top: -120px;
+        margin-left: 120px;
+        padding-left: 0px;
+        border-radius: 50px;
+    }
+    #Ourcomand td ol:hover {
+        display: block;
+        width: 200px;
+    }
+    #Ourcomand td ol span{
+
+        position:absolute;
+        color: #ffffff;
+        font-size: 22px;
+        font-family: 'proxima nova regular';
+        bottom: 35px;
+        width: 50px;
+        display: none;
+    }
+    #Ourcomand td ol:hover span{
+        display: inline-block;
+        opacity: 1;
+        position:absolute;
+        color: #ffffff;
+        font-size: 22px;
+        font-family: 'proxima nova regular';
+        bottom: 10px; width: 50px;
+    }
+    .Font25{
+        font-size: 25px;
+    }
+    .OurDes{
+        position: relative;
+        top: 30%;
+        background-color: #666666;
+        height: 1000px;
+        width: 1000px;
+    }
+    #Product{
+
+        position: relative;
+        background-color: #ebebeb;
+                width: 100%;         max-width: 800px;
+        height: 2050px;
+
+    }
+    #Product img{
+        width: 300px;
+        height: 300px;
+    }
+    .ProdCont{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: inline;
+        margin: 30px 0px 10px 24px;
+        font-family: "proxima nova regular";
+
+    }
+    #Product div div{
+        position: relative;
+
+        width: 300px;
+        height: 300px;
+
+        overflow: hidden;
+        display: inline-block;
+
+
+    }
+
+    #Product div div p{
+        position: relative;
+        bottom: 90px;
+        background-color: #000000;
+        color: #ffffff;
+        height: 50px;
+        font-size: 25px;
+        padding-left: 20px;
+        padding-top: 20px;
+        opacity: 0.5;
+        transition: opacity 1s;
+
+    }
+    #Product div div span{
+        position: relative;
+        float: right;
+        bottom: 5px;
+        right: 10px;
+        height: 50px;
+
+    }
+    #Product div div:hover p{
+
+        opacity: 1;
+    }
+
+    #Product div div:hover img{
+
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    #Head6{
+
+        position: relative;
+        background-color: #666666;
+        height: 820px;
+                width: 100%;         max-width: 800px;
+
+    }
+    #Head6 ol{
+        position: relative;
+        top: 50px;
+
+                width: 100%;         max-width: 800px;
+        padding-left: 0px;
+
+    }
+    #Head6 ol li{
+        display: inline;
+        padding-left: 10px;
+    }
+    #Head6 ol p{
+        text-align: center;
+        font-size: 14px;
+        font-family: Proxima_Nova_Bold;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        color: white;
+        padding-right: 10px;
+    }
+    #About{
+        position: relative;
+        background-color: white;
+        height: 400px;
+        width: 100%;
+        max-width: 800px;
+
+    }
+    .AboutAN{
+        color: #363636;
+        position: relative;
+                width: 100%;         max-width: 800px;
+
+        text-align: center;
+        font-size: 18px;
+        font-family: "proxima nova regular";
+        top: 5%;
+
+    }
+    .AboutANName{
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        color: #363636;
+        font-family: Proxima_Nova_Bold;
+        border-bottom: 8px solid #363636;
+                width: 100%;         max-width: 800px;
+
+        padding-bottom: 30px;
+        padding-top: 30px;
+
+    }
+    #AboutA{
+        position: relative;
+        background-color: #ebebeb;
+        width: 100%;
+        max-width: 800px;
+
+
+        color: #363636;
+        font-size: 18px;
+        font-family: "proxima nova regular";
+    }
+    #AboutA p{
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: "proxima_nova_black";
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+        color: #363636;
+    }
+    #AboutA tr td span{
+        padding: 10px 10px 10px 10px;
+        font-size: 12px;
+    }
+    #AboutA img{
+        position: relative;
+
+        margin-right: 8px;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    #AboutL{
+        position: relative;
+        background-color: #fffcfc;
+                width: 100%;         max-width: 800px;
+
+
+        color: #363636;
+        font-size: 18px;
+        font-family: "proxima nova regular";
+    }
+    #AboutL p{
+        font-size: 48px;
+        text-transform: uppercase;
+        font-family: "proxima_nova_black";
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+        color: #363636;
+    }
+    #AboutL tr td span{
+        padding: 10px 10px 10px 10px;
+        font-size: 22px;
+    }
+    #AboutL img{
+        position: relative;
+
+        margin: 5px;
+        width: 100%;
+        max-width: 800px;
+    }
+    #AboutL table,tr,td{
+        width: 100%;
+        max-width: 800px;
+    }
+
+    #News p{
+        font-size: 40px;text-transform: uppercase;font-family: "proxima_nova_black";padding-bottom: 10px;margin-bottom: 0px;color: #363636;
+    }
+    #News{
+        position: relative;
+        background-color: #ebebeb;
+        width: 1000px;
+        left: calc(50% - 500px);
+
+        color: #363636;
+        font-size: 18px;
+        font-family: "proxima nova regular";
+    }
+    #News img{
+        position: relative;
+        width: 500px;
+    }
+    #News a{
+        text-decoration: none;
+        color: #363636;
+    }
+    #News a:hover{
+        color: red;
+    }
+
+
+
+
+    #WorkWhith{
+        height: 220px;
+        background-color: #7f7f7f;
+                width: 100%;         max-width: 800px;
+        position: relative;
+
+    }
+    #WorkWhith img{
+        position: relative;
+                width: 100%;         max-width: 800px;
+
+        margin-top: 25px;
+
+    }
+    .TitelST{
+        width: 100%;
+        max-width: 800px;
+        border-bottom: 10px solid #363636;
+        text-align: center;
+        position: relative;
+
+        font-size: 20px;
+    }
+    .TitelST h1 {
+        text-align: center;
+    }
+    #Contact{
+        background-color: #ebebeb;
+        height: 850px;
+                width: 100%;         max-width: 800px;
+        position: relative;
+
+
+    }
+    #Contact table{
+                width: 100%;         max-width: 800px;
+        position: relative;
+
+    }
+    #Contact tr {
+                width: 100%;         max-width: 800px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        display: inline-block;
+    }
+    #Contact td{
+
+    }
+    .btn{
+        position: relative;
+        bottom: -10px;
+        width: 352px;
+        height: 100px;
+        font-family: 'proxima nova regular';
+        font-size: 25px;
+        color: #42b8dd;
+        border-radius: 5px;
+        margin-left: 0px;
+        border: 1px solid white;
+        background-color: white;
+    }
+    #map{
+        height: 640px;
+                width: 100%;         max-width: 800px;
+        position: relative;
+
+    }
+    #UP{
+        position: relative;
+        width: 100%;
+        background-color: #15161a;
+        height: 200px;
+        text-align: center;
+
+    }
+    #UP h3{
+        margin:  0 0 0 0 ;
+    }
+    #Galerea_techic{
+        position: relative;
+        top: 50px;
+        width: 100%;
+        max-width: 800px;
+
+        height: auto;
+    }
+    #Galerea_techic_Conteiner{
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+
+
+
+    }
+    #Galerea_techic_Conteiner table{
+        width: 100%;
+        max-width: 800px;
+        position: relative;
+
+        margin-bottom: 20px;
+		
+    }
+    #Galerea_techic_Conteiner tr{
+       height: 500px;
+
+
+
+    }
+    #Galerea_techic_Conteiner td{
+        width: 100%;
+        max-width: 800px;
+        box-shadow: 0 0 1px rgba(0,0,0,0.5);
+		display:inline;
+
+
+    }
+    #Galerea_techic_Conteiner td div{
+        font-family: "proxima nova cold";
+        font-size: 24px;
+        margin-bottom: 20px;
+
+
+    }
+    #Galerea_techic_Conteiner td img{
+
+        position: relative;
+
+        width: 100%;
+        max-width: 500px;
+
+
+        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+
+    }
+    .itemsCont p{
+        overflow:hidden;
+
+    }
+    .Galerea_techicc{
+        position: relative;
+                width: 100%;         max-width: 800px;
+
+        height: auto;
+        background-color: #ffffff;
+    }
+    .Galerea_techic_Conteinerr{
+        position: relative;
+                width: 100%;         max-width: 800px;
+
+        height: auto;
+
+
+    }
+    .Galerea_techic_Conteinerr table{
+                width: 100%;         max-width: 800px;
+        position: relative;
+
+        margin-bottom: 20px;
+    }
+    .Galerea_techic_Conteinerr tr{
+        height: 500px;
+
+
+    }
+    .Galerea_techic_Conteinerr td{
+                width: 100%;         max-width: 800px;
+
+        display:inline;
+
+
+
+    }
+    .Galerea_techic_Conteinerr td div{
+
+        font-family: "proxima nova cold";
+        font-size: 24px;
+        margin-bottom: 20px;
+
+
+
+    }
+    .Galerea_techic_Conteinerr td img{
+
+
+        width: 358px;
+        height: 300px;
+    }
+    #SortMenu{
+    display: inline;
+}
+    #SortMenu select{
+    background-color: #ffffff;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+        max-width: 800px;
+    height: 40px;
+        margin-bottom: 10px;
+    box-shadow: 0 0 10px #88B7FD;
+    margin-right: 10px;
+    font-family: proxima nova regular;
+
+}
+    #View{
+        position: relative;
+        top: 50px;
+        width: 100%;
+        max-width: 2600px;
+        height: auto;
+
+        background-color:  #ffffff;
+        overflow: hidden;
+        box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+    #HADER{
+        position: relative;
+        width: 1000px;
+        left: calc(50% - 500px);
+        background-color: #ebebeb;
+        height: 100px;
+    }
+    .textoll{
+
+        position: relative;
+        top: 40px;
+        margin-left: 5px;
+        height: 100%;
+        padding-bottom: 20px;
+        max-height: 2600px;
+
+    }
+    .itemsCont{
+        width: 100%;
+        max-width: 800px;
+        max-height: 1100px;
+        overflow: hidden;
+		margin: 0;
+        text-align: center;
+    }
+    .More{
+        border-radius: 4px;
+        background-color: #3a3a3a;
+        position: relative;
+        width: 90px;
+        height: 40px;
+        padding: 10px 20px 0px 15px;
+        color: #ffffff;
+        left: calc(50% - 63px);
+    }
+    .More:hover{
+        background-color: #979797;
+    }
+    .bay{
+        font-family: proxima nova regular;
+        font-size: 22px;
+        background-color: #ff4a4a;
+        color: white;
+        width: 95%;
+        max-width: 800px;
+        text-align:center;
+        border-radius: 20px;
+        padding: 10px 5px 10px 5px;
+    }
+    .bay:hover{
+        background-color: #ebebeb;
+        color: #ff4a4a;
+        box-shadow: 0 0 5px rgba(0,0,0,0.8);
+
+    }
+    .SendM{
+
+    }
+    .View_More{
+        position: fixed;
+        width: 90%;
+        height: 900px;
+        left: 5%;
+        top: 10px;
+        background-color:  #ffffff;
+        z-index: 1;
+        box-shadow: 0 0 3px rgba(0,0,0,0.5);
+        display: none;
+
+
+    }
+    #gallery_01 img{
+        border:2px solid white;}
+    .active img{
+        border:2px solid #333 !important;}
+    #Back{
+        position: relative;
+        background-color: #ebebeb;
+        width: 100px;
+        height: 30px;
+        padding-top: 10px;
+        text-align: center;
+        border-radius: 0 50px 50px 0;
+        font-family: "proxima nova regular";
+        box-shadow: 0 0 5px rgba(0,0,0,0.8);
+
+    }
+    #Back:hover{
+        background-color: #979797;
+        box-shadow: 0 0 5px rgba(0,0,0,0.8);
+    }
+    #conBack{
+        position: relative;
+        width: 100px;
+        height: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 0 50px 50px 0;
+        font-family: "proxima nova regular";
+
+    }
+    .infop{
+        position: relative;
+        text-align: center;
+        width: 100%;
+        max-width: 2600px;
+    }
+    .textinfo{
+
+        position: relative;
+
+        bottom: 800px;
+        width: 100%;
+        max-width: 800px;
+    }
+    .infop p {
+        font-family: "proxima nova regular";
+        margin-bottom: 5px;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .infop span{
+        color: #5787e8;
+    }
+    .addtext{
+        height: 100%;
+        max-height: 2600px;
+        margin-bottom: 100px;
+
+
+    }
+
+    #SkypeButton_Call_tovannaland_1 p{
+        display: inline-block;
+    }
+    .slidesdel{
+        cursor:default;
+        position:relative;
+        top:0px;
+        left:0px;
+        width:360px;
+        height:250px;
+        overflow:hidden;
+    }
+    .jssora106{
+        display: none;
+    }
+    .jssort101{
+                width: 100%;         max-width: 800px;
+    }
+    .Video{
+        position: relative;
+        top: 30px;
+        margin-bottom: 50px;
+
+
+
+}
+@media (min-width: 319px) and (max-width: 361px) {
+    .Video iframe {
+        width: 360px;
+        height: 200px;
+
+        margin-bottom: 100px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    }
+}
+@media (min-width: 362px) and (max-width: 505px) {
+    .Video iframe {
+        width: 360px;
+        height: 230px;
+
+        margin-bottom: 100px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    }
+}
+@media (min-width: 500px) and (max-width: 600px) {
+    .Video iframe {
+        width: 480px;
+        height: 280px;
+
+        margin-bottom: 100px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    }
+}
+@media (min-width: 600px) and (max-width: 700px) {
+    .Video iframe {
+        width: 550px;
+        height: 320px;
+
+        margin-bottom: 100px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    }
+}
+@media (min-width: 700px) and (max-width: 800px) {
+    .Video iframe {
+        width: 600px;
+        height: 350px;
+
+        margin-bottom: 100px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    }
+}
+     .SOLD{
+      display: none;
+
+
+
+     }
+
+
+
+.swiper-container {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    max-width: 800px;
+
+    max-height: 100%;
+}
+.swiper-wrapper{
+    padding-left: initial;
+    margin: 0;
+}
+.swiper-slide img{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 100%;
+    border-right: 1px solid black;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color:#000;
+    opacity: 1;
+    background: rgba(0,0,0,0.2);
+}
+.swiper-pagination{
+    position: relative;
+    top: 15px;
+
+}
+.swiper-pagination-bullet-active {
+    color:#fff;
+    background: #007aff;
+}

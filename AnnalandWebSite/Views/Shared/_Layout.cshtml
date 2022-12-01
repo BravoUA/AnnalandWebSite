@@ -44,7 +44,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 
-	<link href="Style/style1.css" type="text/css" rel="stylesheet">
+	<link href="~/css/style1.css" type="text/css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
     <script src="contactform.js"></script>
@@ -52,16 +52,16 @@
 	<script type="text/javascript" src="jqzoom.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="Style/Style.css" media="(min-width: 900px)" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" media="(max-width: 800px)" href="Style/Style_mob.css" type="text/css">
+	<link href="~/css/Style.css" media="(min-width: 900px)" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" media="(max-width: 800px)" href="~/css/Style_mob.css" type="text/css">
 
 
-    <link rel="stylesheet" href="Style/styleM.css" type="text/css">
-    <link rel="stylesheet" href="Style/media.css" type="text/css">
+    <link rel="stylesheet" href="~/css/styleM.css" type="text/css">
+    <link rel="stylesheet" href="~/css/media.css" type="text/css">
 
 
-	<link rel="stylesheet" href="Style/swiper.min2.css" type="text/css">
-	<script type="text/javascript" src="js/swiper.min3.js"></script>
+	<link rel="stylesheet" href="~/css/swiper.min2.css" type="text/css">
+	<script type="text/javascript" src="~/js/swiper.min3.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
 
@@ -73,27 +73,92 @@
                    </noscript>
  <!-- End Google Tag Manager (noscript) -->
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AnnalandWebSite</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+ <div id="Head">
+
+        <div class="MENU">
+            <ul class="menu">
+                <li class="annaland" style="font-family: proxima nova cold;"><a href="index.html" style="">Anna<span class="blue">land</span></a></li>
+                <li><a href=index.html>Головна</a>
+                    <ul class="submenu">
+                        <li><a href=#Servise>Наші послуги</a></li>
+                        <li><a href=#About>Про Анналанд</a></li>
+
+                        <li><a href=#map>Карта проїзду</a></li>
                     </ul>
-                </div>
-            </div>
+                </li>
+
+                <li><a href=#>Про нас</a>
+                    <ul class="submenu">
+                        <li><a href=About.html#ab1>Історія</a></li>
+                        <li><a href=About.html#ab2>Наші цілі</a></li>
+                        <li><a href=About.html#ab3>Про Анналанд-логістик</a></li>
+                    </ul>
+                </li>
+
+                <li><a href=#>Продаж техніки</a>
+                    <ul class="submenu">
+                        <li><a asp-controller="Home" asp-action="Onsale" asp-route-IdPos="1">Трактори</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Спецтехніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Збиральна техніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Картопляна техніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Техніка для обробка грунту</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Посівна та садильна техніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Техніка для внесення добрив</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Інша техніка</a></li>
+                    </ul>
+                </li>
+
+                <li><a href=#Contact>Контакти</a></li>
+                <p class="lengwich" style="font-family: 'proxima nova regular';position: relative; bottom: 10px; float: right"><a href="#" style="font-family: 'proxima nova regular'; color: red;;text-decoration: none;">УКР</a> | <a href="ru/index.html" style="font-family: 'proxima nova regular'; color: #ffffff;;text-decoration: none;">РУС</a></p>
+            </ul>
+    </div>
+        <nav class="dws-menu">
+            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+            <label for="menu" class="toggleMenu"><i class="fa fa-bars"></i>Меню</label>
+            <ul>
+                <li>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
+                    <a href="#"><i class="fa fa-shopping-cart"></i>Головна</a>
+                    <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="#Servise">Наші послуги</a></li>
+                        <li><a href="#About">Про Анналанд</a></li>
+                        <li><a href="#Ourcomand">Наша команда</a></li>
+                        <li><a href="#map">Карта проїзду</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+                    <a href="#"><i class="fa fa-cogs"></i>Про нас</a>
+                    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="About.html#ab1">Історія</a></li>
+                        <li><a href="About.html#ab2">Наші цілі</a></li>
+                        <li><a href="About.html#ab3">Про Анналанд-логістик</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m3">
+                    <a href="#"><i class="fa fa-cogs"></i>Продаж техніки</a>
+                    <label for="sub_m3" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Onsale">Трактори</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Спецтехніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Збиральна техніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Картопляна техніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Техніка для обробка грунту</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Посівна та садильна техніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Техніка для внесення добрив</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale">Інша техніка</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#Contact"><i class="fa fa-envelope-open"></i>Контакти</a></li>
+            </ul>
         </nav>
-    </header>
+    </div>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
