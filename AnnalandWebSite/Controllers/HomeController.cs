@@ -1,5 +1,6 @@
 ﻿using AnnalandWebSite.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace AnnalandWebSite.Controllers
@@ -29,6 +30,11 @@ namespace AnnalandWebSite.Controllers
 
 
         public IActionResult Onsale(int IdPos) {
+
+            using (var db = new DBConect())
+            {
+                db.Database.Migrate();
+            }
 
             return View();
         }
