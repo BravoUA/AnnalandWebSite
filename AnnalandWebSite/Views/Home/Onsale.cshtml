@@ -10,21 +10,21 @@
 		<div id="SortMenu">
 	<p></p>
 	<select onchange="document.location=this.options[this.selectedIndex].value">
-		<option selected="" disabled="">Марка</option>
-				<option value="Onsale?IdPos=1">Всі марки</option>
+				<option selected="" disabled="">@ViewBag.SelectedNameTab</option>
+				<option value="Onsale?@ViewBag.IdPos">Всі марки</option>
 
 		@foreach (var sortName in ViewBag.SortName)
 		{
-					<option value="Onsale?IdPos=1&Name=@sortName.Key">@sortName.Key</option>
+					<option value="Onsale?@ViewBag.IdPos&Name=@sortName.Key">@sortName.Key</option>
 		}
 	</select>
 
 	<select onchange="document.location=this.options[this.selectedIndex].value">
-		<option selected="" disabled="">Тип</option>
-				<option value="Onsale?IdPos=1">Всі типи</option>
+				<option selected="" disabled="">@ViewBag.SelectedTypeTab</option>
+				<option value="Onsale?@ViewBag.IdPos">Всі типи</option>
 		@foreach (var sortType in ViewBag.SortType)
 		{
-			<option value="Onsale?IdPos=1&Name=@sortType.Key">@sortType.Key</option>
+					<option value="Onsale?@ViewBag.IdPos&@ViewBag.Name&Type=@sortType.Key">@sortType.Key</option>
 		}
 	</select>
 
