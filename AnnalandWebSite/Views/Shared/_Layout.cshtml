@@ -35,7 +35,8 @@
 	<link rel="canonical" href="http://annaland.com.ua/index.html"/>
 	<link rel="alternate" hreflang="uk" href="http://annaland.com.ua/index.html" />	
 	<link rel="alternate" hreflang="ru" href="http://annaland.com.ua/ru/index.html" />		
-
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/js/bootstrap.js" />
 
 
 	<title>ТОВ Анналанд - Головна сторінка Annaland.com.ua</title>
@@ -98,7 +99,7 @@
                 <li><a href=#>Продаж техніки</a>
                     <ul class="submenu">
                         <li><a asp-controller="Home" asp-action="Onsale" asp-route-IdPos="1">Трактори</a></li>
-                        <li><a asp-controller="Home" asp-action="Onsale">Спецтехніка</a></li>
+                        <li><a asp-controller="Home" asp-action="Onsale" asp-route-IdPos="2">Спецтехніка</a></li>
                         <li><a asp-controller="Home" asp-action="Onsale">Збиральна техніка</a></li>
                         <li><a asp-controller="Home" asp-action="Onsale">Картопляна техніка</a></li>
                         <li><a asp-controller="Home" asp-action="Onsale">Техніка для обробка грунту</a></li>
@@ -158,13 +159,11 @@
             </ul>
         </nav>
     </div>
+            
+   
 
-    <div class="container">
-        <main role="main" class="pb-3">
             @RenderBody()
-        </main>
-    </div>
-
+            
     <div id="Contact">
     <form id="ajax-contact-form" action="">
         <table>

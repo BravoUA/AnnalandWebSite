@@ -12,7 +12,8 @@
         public string Text { get; set; }
         public string State { get; set; }
         public int Price { get; set; }
-        public int IDM { get; set; }
+		public int FildType { get; set; }
+		public int IDM { get; set; }
         public int Sale { get; set; }
         public int id { get; set; }
     }

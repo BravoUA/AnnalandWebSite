@@ -1,4 +1,62 @@
-﻿@{
+﻿@model AnnalandWebSite.Models.MachineryModel;
+@{
     ViewData["Title"] = "On Sale";
 }
-bjkhblhb
+<div id="content">
+
+
+
+<div id="Items">
+		<div id="SortMenu">
+	<p></p>
+	<select onchange="document.location=this.options[this.selectedIndex].value">
+		<option selected="" disabled="">Марка</option>
+				<option value="Onsale?IdPos=1">Всі марки</option>
+
+		@foreach (var sortName in ViewBag.SortName)
+		{
+					<option value="Onsale?IdPos=1&Name=@sortName.Key">@sortName.Key</option>
+		}
+	</select>
+
+	<select onchange="document.location=this.options[this.selectedIndex].value">
+		<option selected="" disabled="">Тип</option>
+				<option value="Onsale?IdPos=1">Всі типи</option>
+		@foreach (var sortType in ViewBag.SortType)
+		{
+			<option value="Onsale?IdPos=1&Name=@sortType.Key">@sortType.Key</option>
+		}
+	</select>
+
+
+</div>
+
+		
+		<div id="Galerea_techic_Conteiner">
+
+
+
+				<div class="row mt-5 mb-2">
+
+
+
+				@{
+					List<MachineryModel> machineryModel = ViewBag.Machinery;
+					List<HadImgPath> hadImgPaths = ViewBag.imgSource;
+					for (int i = 0; i < machineryModel.Count();i++) { 
+					<div class="col-lg-4">
+							<img class="img-thumbnail" src="@hadImgPaths[i].hadimgpath" />
+						<h3> @machineryModel[i].Name @machineryModel[i].Model</h3>
+						<p>Рік: @machineryModel[i].Year</p>
+						<p> Ціна: @machineryModel[i].Price</p>
+						<p><a class="btn-warning btn-block" href="ViewTR?ID=@machineryModel[i].id&FildType=1">Детальніше </a></p>
+							</div>
+					}
+				}
+						
+
+				
+				</div>
+		</div>
+	
+	</div>

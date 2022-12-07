@@ -9,12 +9,16 @@ namespace AnnalandWebSite
 
 
         public DbContext DbContext { get; set; }
-           public DbSet<MachineryModel> Machinery { get; set; }
-           public DbSet<TechnicModel> Technic { get; set; }
+        public DbSet<MachineryModel> Machinery { get; set; }
+        public DbSet<TechnicModel> Technic { get; set; }
+        public DbSet<HadImgPath> HadImgPath { get; set; }
+        public DbSet<HadImgPathT> HadImgPathT { get; set; }
+        public DbSet<MachinesImg> MachinesImg { get; set; }
+        public DbSet<TechnicImg> TechnicImg { get; set; }
 
-    
 
-       public DBConect()
+
+        public DBConect()
        {
             Database.EnsureCreated();
         }
@@ -22,9 +26,10 @@ namespace AnnalandWebSite
        protected override void OnConfiguring(DbContextOptionsBuilder options)
        {
            // connect to sqlite database
-           options.UseSqlite("Filename=ALDB.db");
+           options.UseSqlite("Filename=MyDb.db");
        }
-
+        
+        
 
 
     }
