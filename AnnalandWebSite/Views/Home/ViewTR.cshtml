@@ -1,0 +1,122 @@
+﻿
+
+<form id="ajax-contact-form" action="">
+	<div id="View">
+		
+		<div id="conBack" style="top: 10px;"><a href="Prodaja.php?techW=Z#Galerea_techic" style="text-decoration: none; color:black;"><div id="Back">НАЗАД</div></a></div> ';
+
+
+		<div class="swiper-container">
+
+			<ul class="swiper-wrapper">
+
+
+				@foreach (var Img in ViewBag.imgSource)
+				{
+					<li class="swiper-slide"><img data-u="image" src="/@Img.imgpath" alt="-------' Продаж бу сг техніки з Нідерландів" /></li>
+
+				}
+				
+
+
+			</ul>
+			<!-- Add Pagination -->
+			<link rel="stylesheet" href="~/css/swiper.min.css" type="text/css">
+			<script type="text/javascript" src="~/js/swiper.min.js"></script>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+		<script>
+			var swiper = new Swiper(".swiper-container", {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
+		</script>
+		@{
+			if (ViewBag.IdPos == 1)
+			{
+				<div class="textoll">
+					<div class="infop" style="float: right;position: relative;">
+						<h2 style="margin-bottom: 5px; margin-top:10px"><p style="font-family: Proxima_Nova_Bold; font-size: 22px;">@ViewBag.MorT[0].Name</p></h2>
+						<h3 style="margin-bottom: 5px; margin-top:10px">
+							<p style="font-family: proxima nova regular; ">
+								<span>Марка: @ViewBag.MorT[0].Model</span>
+							</p><h3>
+								<p style="font-family: proxima nova regular;  ">@ViewBag.MorT[0].Price€</p>
+								<p style="font-family: proxima nova regular;  color:red;">
+									<span style="color: #000000">Стан:</span> @ViewBag.MorT[0].State
+								</p>
+								<p class="bay">
+									Передзвонити вам <span class="SendM">
+										<input type="text" name="name" value="" placeholder="Ваше Ім\'я" style="margin-top:5px;width:80%; ">
+										<input type="text" name="tel" value="" placeholder="Т-номер 80637776655" style=" margin-top:5px;width:80%;">
+										<textarea id="Textarea" name="message" style=" display: none; width:80%;">@ViewBag.MorT[0].Name @ViewBag.MorT[0].Model</textarea>
+										<button type="submit" name="submit" style=" margin-top:5px; width:80%; ">Надіслати</button>
+									</span>
+								</p>
+								<p style="font-family: proxima nova regular; ">
+									<span>Рік випуску:</span> @ViewBag.MorT[0].Year
+									<span>Тип:</span> @ViewBag.MorT[0].Type
+									<span>Напрацювання:</span> @ViewBag.MorT[0].Working_hours
+									<span>Вага:</span> @ViewBag.MorT[0].Mass
+									<span>Потужність:</span> @ViewBag.MorT[0].Power
+									<span>Привезений з Нідерландів. Вся техніка розмитнена та зареестрована в Україні.</span>
+								</p>
+								<p class="addtext">@ViewBag.MorT[0].Text</p>
+
+					</div>
+				</div>
+			}
+			else if (ViewBag.IdPos == 3)
+			{
+				<div class="textoll">
+					<div class="infop" style="float: right;position: relative;">
+						<h2 style="margin-bottom: 5px; margin-top:10px"><p style="font-family: Proxima_Nova_Bold; font-size: 22px;">@ViewBag.MorT[0].Name</p></h2>
+						<h3 style="margin-bottom: 5px; margin-top:10px">
+							<p style="font-family: proxima nova regular; ">
+								<span>Марка: @ViewBag.MorT[0].Model</span>
+							</p><h3>
+								<p style="font-family: proxima nova regular;  ">@ViewBag.MorT[0].Price€</p>
+								<p style="font-family: proxima nova regular;  color:red;">
+									<span style="color: #000000">Стан:</span> @ViewBag.MorT[0].State
+								</p>
+								<p class="bay">
+									Передзвонити вам <span class="SendM">
+										<input type="text" name="name" value="" placeholder="Ваше Ім\'я" style="margin-top:5px;width:80%; ">
+										<input type="text" name="tel" value="" placeholder="Т-номер 80637776655" style=" margin-top:5px;width:80%;">
+										<textarea id="Textarea" name="message" style=" display: none; width:80%;">@ViewBag.MorT[0].Name @ViewBag.MorT[0].Model</textarea>
+										<button type="submit" name="submit" style=" margin-top:5px; width:80%; ">Надіслати</button>
+									</span>
+								</p>
+								<p style="font-family: proxima nova regular; ">
+									<span>Рік випуску:</span> @ViewBag.MorT[0].Year
+									<span>Тип:</span> @ViewBag.MorT[0].Type						
+									<span>Вага:</span> @ViewBag.MorT[0].Mass
+									<span>Привезений з Нідерландів. Вся техніка розмитнена та зареестрована в Україні.</span>
+								</p>
+								<p class="addtext">@ViewBag.MorT[0].Text</p>
+
+					</div>
+				</div>
+				
+			}
+		}
+
+	</div>
+
+	</div>
+
+	</div>
+</form>
