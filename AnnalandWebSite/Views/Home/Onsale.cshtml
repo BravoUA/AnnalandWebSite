@@ -1,4 +1,5 @@
-﻿@model AnnalandWebSite.Models.MachineryModel;
+﻿
+
 @{
     ViewData["Title"] = "On Sale";
 }
@@ -35,17 +36,35 @@
 		<div id="Galerea_techic_Conteiner">
 				<div class="row mt-5 mb-2">
 					@{
+					if (ViewBag.Id > 3)
+					{
+						List<TechnicModel> machineryModel = ViewBag.Machinery;
+						List<HadImgPathT> hadImgPaths = ViewBag.imgSource;
+						for (int i = 0; i < machineryModel.Count(); i++)
+						{
+							<div class="col-lg-4">
+								<img class="img-thumbnail" src="@hadImgPaths[i].hadImgPathT" />
+								<h3> @machineryModel[i].Name @machineryModel[i].Model</h3>
+								<p>Рік: @machineryModel[i].Year</p>
+								<p> Ціна: @machineryModel[i].Price</p>
+								<p><a class="btn-warning btn-block" href="ViewTR?@ViewBag.IdPos&ID=@machineryModel[i].id">Детальніше </a></p>
+							</div>
+						}
+					}else{
 					List<MachineryModel> machineryModel = ViewBag.Machinery;
 					List<HadImgPath> hadImgPaths = ViewBag.imgSource;
-					for (int i = 0; i < machineryModel.Count();i++) { 
-					<div class="col-lg-4">
-							<img class="img-thumbnail" src="@hadImgPaths[i].hadimgpath" />
-						<h3> @machineryModel[i].Name @machineryModel[i].Model</h3>
-						<p>Рік: @machineryModel[i].Year</p>
-						<p> Ціна: @machineryModel[i].Price</p>
-							<p><a class="btn-warning btn-block" href="ViewTR?@ViewBag.IdPos&ID=@machineryModel[i].id">Детальніше </a></p>
+						for (int i = 0; i < machineryModel.Count(); i++)
+						{
+							<div class="col-lg-4">
+								<img class="img-thumbnail" src="@hadImgPaths[i].hadimgpath" />
+								<h3> @machineryModel[i].Name @machineryModel[i].Model</h3>
+								<p>Рік: @machineryModel[i].Year</p>
+								<p> Ціна: @machineryModel[i].Price</p>
+								<p><a class="btn-warning btn-block" href="ViewTR?@ViewBag.IdPos&ID=@machineryModel[i].id">Детальніше </a></p>
 							</div>
+						}
 					}
+					
 				}
 				</div>
 		</div>

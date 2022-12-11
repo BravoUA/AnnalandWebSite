@@ -268,6 +268,229 @@ namespace AnnalandWebSite.Controllers
 				}
 			}
 			else
+			 if (IdPos == 3)
+			{
+				ViewBag.IdPos = "IdPos="+ IdPos;
+				if (Name != null && Type == null)
+				{
+
+					List<MachineryModel> machinerySort = new List<MachineryModel>();
+					machinerySort = (from m in machineryModels where m.FildType == IdPos && m.Name == Name orderby m.Name select m).ToList();
+					ViewBag.Machinery = machinerySort;
+
+					var SortName = from m in machineryModels where m.FildType == IdPos orderby m.Name group m by m.Name;
+					var SortType = from m in machinerySort where m.FildType == IdPos orderby m.Type group m by m.Type;
+					ViewBag.SortName = SortName;
+					ViewBag.SortType = SortType;
+
+					List<HadImgPath> sortImg = new List<HadImgPath>();
+					for (int i = 0; i < machinerySort.Count(); i++)
+					{
+						for (int j = 0; j < hadImgPath.Count(); j++)
+						{
+							if (hadImgPath[j].id == machinerySort[i].id)
+							{
+								sortImg.Add(hadImgPath[j]);
+							}
+						}
+					}
+					ViewBag.imgSource = sortImg;
+					ViewBag.Name = "Name=" + Name;
+					ViewBag.SelectedNameTab = Name;
+					ViewBag.SelectedTypeTab = "Тип";
+				}
+				else if (Name != null && Type != null)
+				{
+
+					List<MachineryModel> machinerySort = new List<MachineryModel>();
+					machinerySort = (from m in machineryModels where m.FildType == IdPos && m.Type == Type && m.Name == Name orderby m.Name select m).ToList();
+					ViewBag.Machinery = machinerySort;
+
+					var SortName = from m in machineryModels where m.FildType == IdPos orderby m.Name group m by m.Name;
+					var SortType = from m in machinerySort where m.FildType == IdPos orderby m.Type group m by m.Type;
+					ViewBag.SortName = SortName;
+					ViewBag.SortType = SortType;
+
+					List<HadImgPath> sortImg = new List<HadImgPath>();
+					for (int i = 0; i < machinerySort.Count(); i++)
+					{
+						for (int j = 0; j < hadImgPath.Count(); j++)
+						{
+							if (hadImgPath[j].id == machinerySort[i].id)
+							{
+								sortImg.Add(hadImgPath[j]);
+							}
+						}
+					}
+					ViewBag.imgSource = sortImg;
+					ViewBag.SelectedNameTab = Name;
+					ViewBag.SelectedTypeTab = Type;
+				}
+				else if (Name == null && Type != null)
+				{
+
+					List<MachineryModel> machinerySort = new List<MachineryModel>();
+					machinerySort = (from m in machineryModels where m.FildType == IdPos && m.Type == Type orderby m.Name select m).ToList();
+					ViewBag.Machinery = machinerySort;
+
+					var SortName = from m in machinerySort where m.FildType == IdPos orderby m.Name group m by m.Name;
+					var SortType = from m in machinerySort where m.FildType == IdPos orderby m.Type group m by m.Type;
+					ViewBag.SortName = SortName;
+					ViewBag.SortType = SortType;
+
+					List<HadImgPath> sortImg = new List<HadImgPath>();
+					for (int i = 0; i < machinerySort.Count(); i++)
+					{
+						for (int j = 0; j < hadImgPath.Count(); j++)
+						{
+							if (hadImgPath[j].id == machinerySort[i].id)
+							{
+								sortImg.Add(hadImgPath[j]);
+							}
+						}
+					}
+					ViewBag.imgSource = sortImg;
+					ViewBag.SelectedNameTab = "Марка";
+					ViewBag.SelectedTypeTab = Type;
+				}
+				else
+				{
+
+					machineryModels = (from m in machineryModels where m.FildType == IdPos orderby m.Name select m).ToList();
+					ViewBag.Machinery = machineryModels;
+					var SortName = from m in machineryModels where m.FildType == IdPos orderby m.Name group m by m.Name;
+					var SortType = from m in machineryModels where m.FildType == IdPos orderby m.Type group m by m.Type;
+					ViewBag.SortName = SortName;
+					ViewBag.SortType = SortType;
+					List<HadImgPath> sortImg = new List<HadImgPath>();
+					for (int i = 0; i < machineryModels.Count(); i++)
+					{
+						for (int j = 0; j < hadImgPath.Count(); j++)
+						{
+							if (hadImgPath[j].id == machineryModels[i].id)
+							{
+								sortImg.Add(hadImgPath[j]);
+							}
+						}
+					}
+					ViewBag.imgSource = sortImg;
+					ViewBag.SelectedNameTab = "Марка";
+					ViewBag.SelectedTypeTab = "Тип";
+				}
+			}
+			else
+			 if (IdPos > 3)
+			{
+				ViewBag.IdPos = "IdPos=" + IdPos;
+				ViewBag.Id = IdPos;
+				if (Name != null && Type == null)
+				{
+
+					List<TechnicModel> technicSort = new List<TechnicModel>();
+					technicSort = (from m in technicModels where m.FildType == IdPos && m.Name == Name orderby m.Name select m).ToList();
+					ViewBag.Machinery = technicSort;
+
+					var SortName = from m in technicModels where m.FildType == IdPos orderby m.Name group m by m.Name;
+					var SortType = from m in technicSort where m.FildType == IdPos orderby m.Type group m by m.Type;
+					ViewBag.SortName = SortName;
+					ViewBag.SortType = SortType;
+
+					List<HadImgPathT> sortImg = new List<HadImgPathT>();
+					for (int i = 0; i < technicSort.Count(); i++)
+					{
+						for (int j = 0; j < hadImgPathT.Count(); j++)
+						{
+							if (hadImgPathT[j].id == technicSort[i].id)
+							{
+								sortImg.Add(hadImgPathT[j]);
+							}
+						}
+					}
+					ViewBag.imgSource = sortImg;
+					ViewBag.Name = "Name=" + Name;
+					ViewBag.SelectedNameTab = Name;
+					ViewBag.SelectedTypeTab = "Тип";
+				}
+				else if (Name != null && Type != null)
+				{
+
+					List<TechnicModel> technicSort = new List<TechnicModel>();
+					technicSort = (from m in technicModels where m.FildType == IdPos && m.Type == Type && m.Name == Name orderby m.Name select m).ToList();
+					ViewBag.Machinery = technicSort;
+
+					var SortName = from m in technicModels where m.FildType == IdPos orderby m.Name group m by m.Name;
+					var SortType = from m in technicSort where m.FildType == IdPos orderby m.Type group m by m.Type;
+					ViewBag.SortName = SortName;
+					ViewBag.SortType = SortType;
+
+					List<HadImgPathT> sortImg = new List<HadImgPathT>();
+					for (int i = 0; i < technicSort.Count(); i++)
+					{
+						for (int j = 0; j < hadImgPathT.Count(); j++)
+						{
+							if (hadImgPathT[j].id == technicSort[i].id)
+							{
+								sortImg.Add(hadImgPathT[j]);
+							}
+						}
+					}
+					ViewBag.imgSource = sortImg;
+					ViewBag.SelectedNameTab = Name;
+					ViewBag.SelectedTypeTab = Type;
+				}
+				else if (Name == null && Type != null)
+				{
+
+					List<TechnicModel> technicSort = new List<TechnicModel>();
+					technicSort = (from m in technicModels where m.FildType == IdPos && m.Type == Type orderby m.Name select m).ToList();
+					ViewBag.Machinery = technicSort;
+
+					var SortName = from m in technicSort where m.FildType == IdPos orderby m.Name group m by m.Name;
+					var SortType = from m in technicSort where m.FildType == IdPos orderby m.Type group m by m.Type;
+					ViewBag.SortName = SortName;
+					ViewBag.SortType = SortType;
+
+					List<HadImgPathT> sortImg = new List<HadImgPathT>();
+					for (int i = 0; i < technicSort.Count(); i++)
+					{
+						for (int j = 0; j < hadImgPathT.Count(); j++)
+						{
+							if (hadImgPathT[j].id == technicSort[i].id)
+							{
+								sortImg.Add(hadImgPathT[j]);
+							}
+						}
+					}
+					ViewBag.imgSource = sortImg;
+					ViewBag.SelectedNameTab = "Марка";
+					ViewBag.SelectedTypeTab = Type;
+				}
+				else
+				{
+
+					technicModels = (from m in technicModels where m.FildType == IdPos orderby m.Name select m).ToList();
+					ViewBag.Machinery = technicModels;
+					var SortName = from m in technicModels where m.FildType == IdPos orderby m.Name group m by m.Name;
+					var SortType = from m in technicModels where m.FildType == IdPos orderby m.Type group m by m.Type;
+					ViewBag.SortName = SortName;
+					ViewBag.SortType = SortType;
+					List<HadImgPathT> sortImg = new List<HadImgPathT>();
+					for (int i = 0; i < technicModels.Count(); i++)
+					{
+						for (int j = 0; j < hadImgPathT.Count(); j++)
+						{
+							if (hadImgPathT[j].id == technicModels[i].id)
+							{
+								sortImg.Add(hadImgPathT[j]);
+							}
+						}
+					}
+					ViewBag.imgSource = sortImg;
+					ViewBag.SelectedNameTab = "Марка";
+					ViewBag.SelectedTypeTab = "Тип";
+				}
+			}
+			else
 			if (IdPos == 0)
 			{
 				ViewBag.Machinery = machineryModels;
@@ -296,9 +519,9 @@ namespace AnnalandWebSite.Controllers
 				machineryImg = db.MachinesImg.ToList();
 				technicImg = db.TechnicImg.ToList();
 			}
-			if (IdPos == 1 || IdPos == 2)
+			if (IdPos <= 3)
 			{
-                ViewBag.IdPos = 1;
+                ViewBag.IdPos = IdPos;
                 List<MachineryModel> technicSort = new List<MachineryModel>();
 				technicSort = (from m in machineryModels where m.id == ID select m).ToList();
 				ViewBag.MorT = technicSort;
@@ -307,8 +530,8 @@ namespace AnnalandWebSite.Controllers
 
                 ViewBag.imgSource = sortImg;
 			}
-			else {
-                ViewBag.IdPos = 3;
+			else if(IdPos > 3){
+                ViewBag.IdPos = IdPos;
                 List<TechnicModel> technicSort = new List<TechnicModel>();
 				technicSort = (from m in technicModels where m.id == ID select m).ToList();
 				ViewBag.MorT = technicSort;

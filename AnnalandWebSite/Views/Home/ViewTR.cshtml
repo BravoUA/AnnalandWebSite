@@ -13,8 +13,16 @@
 
 				@foreach (var Img in ViewBag.imgSource)
 				{
-					<li class="swiper-slide"><img data-u="image" src="/@Img.imgpath" alt="-------' Продаж бу сг техніки з Нідерландів" /></li>
+					if (ViewBag.IdPos > 3)
+					{
+						<li class="swiper-slide"><img data-u="image" src="/@Img.TechnicImgPath" alt="-------' Продаж бу сг техніки з Нідерландів" /></li>
+						
+					} else
+					{
+						<li class="swiper-slide"><img data-u="image" src="/@Img.imgpath" alt="-------' Продаж бу сг техніки з Нідерландів" /></li>
+					}
 
+					
 				}
 				
 
@@ -45,7 +53,7 @@
 			});
 		</script>
 		@{
-			if (ViewBag.IdPos == 1)
+			if (ViewBag.IdPos <= 3)
 			{
 				<div class="textoll">
 					<div class="infop" style="float: right;position: relative;">
@@ -79,7 +87,7 @@
 					</div>
 				</div>
 			}
-			else if (ViewBag.IdPos == 3)
+			else if (ViewBag.IdPos > 3)
 			{
 				<div class="textoll">
 					<div class="infop" style="float: right;position: relative;">
