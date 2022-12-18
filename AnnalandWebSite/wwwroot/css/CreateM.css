@@ -1,0 +1,94 @@
+body{
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
+@font-face {
+    font-family: Haderfont; /* Гарнитура шрифта */
+    src: url(font/bastardilla-FFP.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: font1; /* Гарнитура шрифта */
+    src: url(font/DancingScript-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+#ContentConteiner{
+    position: relative;
+    top:150px;
+    height: 1000px;
+
+
+
+
+}
+#ContentConteiner img{
+
+}
+#Content{
+
+    border: 1px solid black;
+
+}
+.ContText p{
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 80px;
+    font-family: font1;
+    position: relative;
+    left: 35%;
+}
+.ContText{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    float: left;
+    display: block;
+    background: #f2f5f6; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+    background-attachment: fixed;
+    background-size: cover;
+    border: 1px solid black;
+    width: 100%;
+
+
+}
+.ContText input{
+
+}
+.ContText ol{
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+float: left;
+    font-size: 24px;
+
+}
+.ContText input,select{
+    float: right;
+    font-size: 16px;
+
+}
+
+
+#list{
+    position: relative;
+    height: auto;
+    width: auto;
+    float: left;
+}
+#list span{
+height: auto;
+    width: 200px;
+    margin: 10px 10px 10px 10px;
+}

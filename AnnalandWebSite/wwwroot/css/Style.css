@@ -990,19 +990,7 @@ area:hover {
         margin-bottom: 40px;
     }
 
-.btn {
-    position: relative;
-    bottom: 45px;
-    font-family: 'proxima nova regular';
-    height: 100px;
-    width: 355px;
-    font-size: 25px;
-    color: #42b8dd;
-    border-radius: 5px;
-    margin-left: 0px;
-    border: 1px solid white;
-    background-color: white;
-}
+
 
 #map {
     height: 600px;

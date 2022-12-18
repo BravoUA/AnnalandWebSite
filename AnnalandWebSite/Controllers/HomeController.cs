@@ -2,8 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
+using NuGet.Common;
 using System.Collections.Immutable;
 using System.Diagnostics;
+using System.Security.Cryptography;
+using System.Security.Policy;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
@@ -545,7 +549,42 @@ namespace AnnalandWebSite.Controllers
 		}
 
 
+		public IActionResult Login() { 			
+			return View();
+		}
+		public IActionResult Edite()
+		{
 
+			List<Users> users = new List<Users>();
+			List<Salt> salts = new List<Salt>();
+			using (var db = new DBConect())
+			{
+				db.Database.Migrate();
+				users = db.Users.ToList();
+				salts = db.Salt.ToList();
+			}
+
+			string Email = Request.Form["Email"];
+			string Possword = Request.Form["Password"];
+
+			HashingL_P hashingL_P = new HashingL_P();
+			//	var hashPaswword = hashingL_P.HashPasword(Possword, out var saltP);
+
+				//var hashEmail  = hashingL_P.HashPasword(Email, out var saltE);
+
+
+
+			bool chekPassword = hashingL_P.VerifyString(Possword, users[2].Password, salts[0].SaltPassword);
+			bool chekEmail = hashingL_P.VerifyString(Email, users[2].Email, salts[0].SaltEmail);
+
+			if (chekPassword && chekEmail)
+			{
+				return View();
+			}
+			else {
+				return View("Login");
+			}
+		}
 
 
 

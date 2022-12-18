@@ -15,10 +15,12 @@ namespace AnnalandWebSite
         public DbSet<HadImgPathT> HadImgPathT { get; set; }
         public DbSet<MachinesImg> MachinesImg { get; set; }
         public DbSet<TechnicImg> TechnicImg { get; set; }
+		public DbSet<Users> Users { get; set; }
+		public DbSet<Salt> Salt{ get; set; }
 
 
 
-        public DBConect()
+		public DBConect()
        {
             Database.EnsureCreated();
         }
