@@ -1,1 +1,218 @@
 ﻿
+
+
+
+
+
+
+
+
+				<div id="Items">
+	@{
+		if (ViewBag.DO == null)
+		{
+                    <div id="SortMenu">
+                        <p></p>
+                        <select onchange="document.location=this.options[this.selectedIndex].value">
+                            <option selected="" disabled="">@ViewBag.SelectedFildType</option>
+                            <option value="Edite?@ViewBag.IdPos">Всі Категорії</option>
+
+                            @foreach (var fildType in ViewBag.FildType)
+                            {
+                                <option value="Edite?IdPos=@fildType.id">@fildType.FildTypeName</option>
+                            }
+                        </select>
+                        <select onchange="document.location=this.options[this.selectedIndex].value">
+                            <option selected="" disabled="">@ViewBag.SelectedNameTab</option>
+                             <option value="Edite?@ViewBag.IdPos">Всі марки</option>
+
+                            @{
+                                if (@ViewBag.IdPos != null)
+                                {
+                                    foreach (var sortName in ViewBag.SortName)
+                                    {
+                                      <option value="Edite?@ViewBag.IdPos&Name=@sortName.Key">@sortName.Key</option>
+                                    }
+                                }
+                            }
+
+                        </select>
+                        <select onchange="document.location=this.options[this.selectedIndex].value">
+                            <option selected="" disabled="">@ViewBag.SelectedTypeTab</option>
+                            <option value="Edite?@ViewBag.IdPos">Всі типи</option>
+
+                            @{
+                                if (@ViewBag.IdPos != null)
+                                {
+                                    foreach (var sortType in ViewBag.SortType)
+                                    {
+                                         <option value="Edite?@ViewBag.IdPos&@ViewBag.Name&Type=@sortType.Key">@sortType.Key</option>
+                                    }
+                                }
+
+                            }
+                        </select>
+					</div>
+		}
+	}
+
+
+			@{
+                        if (ViewBag.IdPos != null && ViewBag.DO == null)
+                        {
+                            <div id="Galerea_techic_Conteiner">
+                                <div class="row mt-5 mb-2">
+                                    @{
+                                        if (ViewBag.Id > 3)
+                                        {
+                                            List<TechnicModel> machineryModel = ViewBag.Machinery;
+                                            List<HadImgPathT> hadImgPaths = ViewBag.imgSource;
+                                            for (int i = 0; i < machineryModel.Count(); i++)
+                                            {
+                                                <div class="col-lg-4">
+                                                    <img class="img-thumbnail" src="@hadImgPaths[i].hadImgPathT" />
+                                                    <h3> @machineryModel[i].Name @machineryModel[i].Model</h3>
+                                                    <p>Рік: @machineryModel[i].Year</p>
+                                                    <p> Ціна: @machineryModel[i].Price</p>
+													<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Детальніше </a></p>
+													<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Редагувати </a></p>
+                                                    <p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id&DO=1">Видалити </a></p>
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            List<MachineryModel> machineryModel = ViewBag.Machinery;
+                                            List<HadImgPath> hadImgPaths = ViewBag.imgSource;
+                                            for (int i = 0; i < machineryModel.Count(); i++)
+                                            {
+                                                <div class="col-lg-4">
+                                                    <img class="img-thumbnail" src="@hadImgPaths[i].hadimgpath" />
+                                                    <h3> @machineryModel[i].Name @machineryModel[i].Model</h3>
+                                                    <p>Рік: @machineryModel[i].Year</p>
+                                                    <p> Ціна: @machineryModel[i].Price</p>
+                                                    <p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Детальніше </a></p>
+                                                    <p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Редагувати </a></p>
+                                                    <p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id&DO=1">Видалити </a></p>
+                                                </div>
+                                            }
+                                        }
+
+                                    }
+                                </div>
+                            </div>
+                           
+                        }
+                        if (ViewBag.DO==1)
+                            {
+			<div id="View">
+
+				<div id="conBack" style="top: 10px;"><a href="Prodaja.php?techW=Z#Galerea_techic" style="text-decoration: none; color:black;"><div id="Back">НАЗАД</div></a></div> ';
+
+
+				<div class="swiper-container">
+
+					<ul class="swiper-wrapper">
+
+
+						@foreach (var Img in ViewBag.imgSource)
+						{
+							if (ViewBag.IdPos > 3)
+							{
+								<li class="swiper-slide"><img data-u="image" src="/@Img.TechnicImgPath" alt="-------' Продаж бу сг техніки з Нідерландів" /></li>
+
+							}
+							else
+							{
+								<li class="swiper-slide"><img data-u="image" src="/@Img.imgpath" alt="-------' Продаж бу сг техніки з Нідерландів" /></li>
+							}
+
+
+						}
+
+
+
+					</ul>
+					<!-- Add Pagination -->
+					<link rel="stylesheet" href="~/css/swiper.min.css" type="text/css">
+					<script type="text/javascript" src="~/js/swiper.min.js"></script>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<script>
+					var swiper = new Swiper(".swiper-container", {
+						slidesPerView: 1,
+						spaceBetween: 30,
+						loop: true,
+						pagination: {
+							el: ".swiper-pagination",
+							clickable: true,
+						},
+						navigation: {
+							nextEl: ".swiper-button-next",
+							prevEl: ".swiper-button-prev",
+						},
+					});
+				</script>
+				@{
+					if (ViewBag.IdPos <= 3)
+					{
+						<div class="textoll">
+							<div class="infop" style="float: right;position: relative;">
+								<h2 style="margin-bottom: 5px; margin-top:10px"><p style="font-family: Proxima_Nova_Bold; font-size: 22px;">@ViewBag.MorT[0].Name</p></h2>
+								<h3 style="margin-bottom: 5px; margin-top:10px">
+									<p style="font-family: proxima nova regular; ">
+										<span>Марка: @ViewBag.MorT[0].Model</span>
+									</p><h3>
+										<p style="font-family: proxima nova regular;  ">@ViewBag.MorT[0].Price€</p>
+										<p style="font-family: proxima nova regular;  color:red;">
+											<span style="color: #000000">Стан:</span> @ViewBag.MorT[0].State
+										</p>
+										<p style="font-family: proxima nova regular; ">
+											<span>Рік випуску:</span> @ViewBag.MorT[0].Year
+											<span>Тип:</span> @ViewBag.MorT[0].Type
+											<span>Напрацювання:</span> @ViewBag.MorT[0].Working_hours
+											<span>Вага:</span> @ViewBag.MorT[0].Mass
+											<span>Потужність:</span> @ViewBag.MorT[0].Power
+										<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@ViewBag.ID">Видалити </a></p>
+										</p>
+										
+
+							</div>
+						</div>
+					}
+					else if (ViewBag.IdPos > 3)
+					{
+						<div class="textoll">
+							<div class="infop" style="float: right;position: relative;">
+								<h2 style="margin-bottom: 5px; margin-top:10px"><p style="font-family: Proxima_Nova_Bold; font-size: 22px;">@ViewBag.MorT[0].Name</p></h2>
+								<h3 style="margin-bottom: 5px; margin-top:10px">
+									<p style="font-family: proxima nova regular; ">
+										<span>Марка: @ViewBag.MorT[0].Model</span>
+									</p><h3>
+										<p style="font-family: proxima nova regular;  ">@ViewBag.MorT[0].Price€</p>
+										<p style="font-family: proxima nova regular;  color:red;">
+											<span style="color: #000000">Стан:</span> @ViewBag.MorT[0].State
+										</p>
+
+										<p style="font-family: proxima nova regular; ">
+											<span>Рік випуску:</span> @ViewBag.MorT[0].Year
+											<span>Тип:</span> @ViewBag.MorT[0].Type
+											<span>Вага:</span> @ViewBag.MorT[0].Mass
+										<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@@ViewBag.ID">Видалити </a></p>
+										</p>
+										
+
+							</div>
+						</div>
+
+					}
+				}
+
+			</div>
+		}
+                    }
+                </div>

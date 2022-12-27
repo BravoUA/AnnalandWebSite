@@ -17,13 +17,13 @@ namespace AnnalandWebSite
         public DbSet<TechnicImg> TechnicImg { get; set; }
 		public DbSet<Users> Users { get; set; }
 		public DbSet<Salt> Salt{ get; set; }
+        public DbSet<FildType> FildType { get; set; }
 
 
-
-		public DBConect()
-       {
+        public DBConect()
+         {
             Database.EnsureCreated();
-        }
+         }
 
        protected override void OnConfiguring(DbContextOptionsBuilder options)
        {
