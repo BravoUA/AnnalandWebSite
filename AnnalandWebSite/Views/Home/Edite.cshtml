@@ -76,7 +76,7 @@
                                                     <p> Ціна: @machineryModel[i].Price</p>
 													<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Детальніше </a></p>
 													<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Редагувати </a></p>
-                                                    <p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id&DO=1">Видалити </a></p>
+													<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id&DO=1">Видалити </a></p>
                                                 </div>
                                             }
                                         }
@@ -91,9 +91,9 @@
                                                     <h3> @machineryModel[i].Name @machineryModel[i].Model</h3>
                                                     <p>Рік: @machineryModel[i].Year</p>
                                                     <p> Ціна: @machineryModel[i].Price</p>
-                                                    <p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Детальніше </a></p>
-                                                    <p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Редагувати </a></p>
-                                                    <p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id&DO=1">Видалити </a></p>
+													<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Детальніше </a></p>
+													<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id">Редагувати </a></p>
+													<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@machineryModel[i].id&DO=1">Видалити </a></p>
                                                 </div>
                                             }
                                         }
@@ -177,7 +177,7 @@
 											<span>Напрацювання:</span> @ViewBag.MorT[0].Working_hours
 											<span>Вага:</span> @ViewBag.MorT[0].Mass
 											<span>Потужність:</span> @ViewBag.MorT[0].Power
-										<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@ViewBag.ID">Видалити </a></p>
+										<p><a class="btn-warning btn-block" href="Delete?IdPos=@ViewBag.IdPos&ID=@ViewBag.ID">Видалити </a></p>
 										</p>
 										
 
@@ -202,7 +202,7 @@
 											<span>Рік випуску:</span> @ViewBag.MorT[0].Year
 											<span>Тип:</span> @ViewBag.MorT[0].Type
 											<span>Вага:</span> @ViewBag.MorT[0].Mass
-										<p><a class="btn-warning btn-block" href="Edite?@ViewBag.IdPos&ID=@@ViewBag.ID">Видалити </a></p>
+										<p><a class="btn-warning btn-block" href="Delete?IdPos=@ViewBag.IdPos&ID=@@ViewBag.ID">Видалити </a></p>
 										</p>
 										
 

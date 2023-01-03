@@ -30,7 +30,23 @@ namespace AnnalandWebSite
            // connect to sqlite database
            options.UseSqlite("Filename=MyDb.db");
        }
+
         
+        public void DeleteFromDB(int ID, int PosID) {
+
+            string NameCateg="";
+            if (PosID <= 3)
+            {
+                NameCateg = "Machinery";
+            }
+            else if(PosID > 3) { NameCateg = "Technic"; }
+
+
+			string SqlQuery = @"Delete from "+ NameCateg +" where id = "+ID+"";
+
+           // Database.ExecuteSqlRaw(SqlQuery);
+
+		}
         
 
 
